@@ -1,5 +1,5 @@
 use crate::cli::Config;
-use crate::matcher::Match;
+use crate::matcher::{find_matches};
 
 mod cli;
 mod error;
@@ -23,7 +23,7 @@ fn main() {
             }
         };
         let reader = std::io::BufReader::new(file);
-        let matches = Match::find_matches(reader, &config);
+        let matches = find_matches(reader, &config);
         for m in matches {
             if config.files.len() > 1 {
                 print!("{}:", file_path.display());

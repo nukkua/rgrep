@@ -1,4 +1,4 @@
-# rgrep [OPTIONS] <PATTERN> [FILES...]
+# rgrep [OPTIONS] [PATTERN] [FILES...]
 
 Options:
   -i        case insensitive
